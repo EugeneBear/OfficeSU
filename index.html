@@ -30,16 +30,16 @@
         function updateState() {
             if (toggle.checked) {
                 stateText.textContent = 'Занято';
-                localStorage.setItem('switchState', 'busy'); // Сохраняем состояние
+                localStorage.setItem('switchState1', 'busy'); // Сохраняем состояние
             } else {
                 stateText.textContent = 'Свободно';
-                localStorage.setItem('switchState', 'free'); // Сохраняем состояние
+                localStorage.setItem('switchState1', 'free'); // Сохраняем состояние
             }
         }
 
         // Восстановление состояния при загрузке страницы
         window.onload = function() {
-            const savedState = localStorage.getItem('switchState');
+            const savedState = localStorage.getItem('switchState1');
             if (savedState === 'busy') {
                 toggle.checked = true; // Устанавливаем переключатель в состояние "занято"
                 stateText.textContent = 'Занято';
